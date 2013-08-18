@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  url: MyString
+  list_price: 9.99
+  current_price: 9.99
+  rating: 9.99
+  reviews: 1
+
+two:
+  title: MyString
+  url: MyString
+  list_price: 9.99
+  current_price: 9.99
+  rating: 9.99
+  reviews: 1
