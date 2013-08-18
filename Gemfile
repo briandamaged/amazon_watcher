@@ -48,3 +48,7 @@ end
 gem 'amazon_deets'
 
 gem 'money-rails'
+
+gem 'clockwork'
+
+gem 'foreman'
