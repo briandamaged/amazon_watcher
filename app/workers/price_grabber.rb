@@ -15,6 +15,8 @@ class PriceGrabber
 			p.update_attributes(deets)
 
 			Rails.logger.info("Updated product: #{ p.id }")
+
+			ProductMailer.target_price_reached(p).deliver
 		end
 	end
 

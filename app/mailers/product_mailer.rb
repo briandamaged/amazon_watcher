@@ -6,7 +6,12 @@ class ProductMailer < ActionMailer::Base
   #
   #   en.product_mailer.target_price_reached.subject
   #
-  def target_price_reached
-    mail to: "constructible.truth@gmail.com", subject: "Target price reached!"
+  def target_price_reached(product)
+    @product = product
+
+    mail(
+      to: "constructible.truth@gmail.com",
+      subject: "TPR: #{ product.title }"
+    )
   end
 end
