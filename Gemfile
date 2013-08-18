@@ -52,3 +52,5 @@ gem 'money-rails'
 gem 'clockwork'
 
 gem 'foreman'
+
+gem 'resque', "~> 1.24"
