@@ -1,0 +1,22 @@
+
+development:
+    delivery_method: :smtp
+    smtp_settings:
+        address: mail.server.com
+        port:    587
+        domain:  website.com
+        authentication: plain
+        enable_starttls_auto: true
+        user_name: USERNAME
+        password:  PASSWORD
+
+production:
+    delivery_method: :smtp
+    smtp_settings:
+        address: mail.server.com
+        port:    587
+        domain:  website.com
+        authentication: plain
+        enable_starttls_auto: true
+        user_name: USERNAME
+        password:  PASSWORD
