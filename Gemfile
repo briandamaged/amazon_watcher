@@ -46,4 +46,5 @@ end
 
 
 gem 'amazon_deets'
-gem 'money'
+
+gem 'money-rails'

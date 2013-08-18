@@ -28,9 +28,6 @@ class ProductsController < ApplicationController
 
     deets = g.grab(params[:product][:url])
 
-    deets[:list_price]    = deets[:list_price].to_money
-    deets[:current_price] = deets[:current_price].to_money
-
     @product = Product.new(deets)
 
     respond_to do |format|

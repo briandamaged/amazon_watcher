@@ -11,17 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130818163350) do
+ActiveRecord::Schema.define(version: 20130818202441) do
 
   create_table "products", force: true do |t|
     t.string   "title"
     t.string   "url"
-    t.decimal  "list_price"
-    t.decimal  "current_price"
     t.decimal  "rating"
     t.integer  "reviews"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "list_price_cents",       default: 0,     null: false
+    t.string   "list_price_currency",    default: "USD", null: false
+    t.integer  "current_price_cents",    default: 0,     null: false
+    t.string   "current_price_currency", default: "USD", null: false
   end
 
   add_index "products", ["url"], name: "products_url_index"

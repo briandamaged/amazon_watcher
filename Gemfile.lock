@@ -72,6 +72,10 @@ GEM
     minitest (4.7.5)
     money (5.1.1)
       i18n (~> 0.6.0)
+    money-rails (0.8.1)
+      activesupport (>= 3.0)
+      money (~> 5.1.0)
+      railties (>= 3.0)
     multi_json (1.7.9)
     net-http-digest_auth (1.4)
     net-http-persistent (2.9)
@@ -142,7 +146,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
-  money
+  money-rails
   rails (= 4.0.0)
   sass-rails (~> 4.0.0)
   sdoc

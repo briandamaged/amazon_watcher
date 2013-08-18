@@ -12,12 +12,12 @@
 
 <p>
   <strong>List price:</strong>
-  <%= @product.list_price %>
+  <%= humanized_money_with_symbol @product.list_price %>
 </p>
 
 <p>
   <strong>Current price:</strong>
-  <%= @product.current_price %>
+  <%= humanized_money_with_symbol @product.current_price %>
 </p>
 
 <p>
