@@ -1,6 +1,63 @@
 <h1>Editing product</h1>
 
-<%= render 'form' %>
+<%= form_for(@product) do |f| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% @product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <h3><%= @product.title %></h3>
+
+  <p>
+    <strong>Url:</strong>
+    <%= @product.url %>
+  </p>
+
+  <p>
+    <strong>List price:</strong>
+    <%= humanized_money_with_symbol @product.list_price %>
+  </p>
+
+  <p>
+    <strong>Current price:</strong>
+    <%= humanized_money_with_symbol @product.current_price %>
+  </p>
+
+
+  <div class="field">
+    <%= f.label :target_price %><br>
+    <%= f.number_field :target_price %>
+  </div>
+
+
+  <p>
+    <strong>Rating:</strong>
+    <%= @product.rating %>
+  </p>
+
+  <p>
+    <strong>Reviews:</strong>
+    <%= @product.reviews %>
+  </p>
+
+
+
+
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
 
 <%= link_to 'Show', @product %> |
 <%= link_to 'Back', products_path %>

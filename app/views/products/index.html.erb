@@ -4,9 +4,9 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Url</th>
       <th>List price</th>
       <th>Current price</th>
+      <th>Target Price</th>
       <th>Rating</th>
       <th>Reviews</th>
       <th></th>
@@ -18,10 +18,10 @@
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td><%= product.title %></td>
-        <td><%= product.url %></td>
-        <td><%= product.list_price %></td>
-        <td><%= product.current_price %></td>
+        <td><%= link_to product.title, product.url %></td>
+        <td><%= humanized_money_with_symbol product.list_price %></td>
+        <td><%= humanized_money_with_symbol product.current_price %></td>
+        <td><%= humanized_money_with_symbol product.target_price %></td>
         <td><%= product.rating %></td>
         <td><%= product.reviews %></td>
         <td><%= link_to 'Show', product %></td>

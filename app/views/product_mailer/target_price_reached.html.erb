@@ -1,6 +1,6 @@
 <h3><%= link_to @product.title, @product.url %></h3>
 
 <ul>
-	<li>Current Price: <%= @product.current_price %></li>
-	<li>Target Price:  $1000.00</li>
+	<li>Current Price: <%= humanized_money_with_symbol @product.current_price %></li>
+	<li>Target Price:  <%= humanized_money_with_symbol @product.target_price %></li>
 </ul>
