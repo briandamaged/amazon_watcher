@@ -16,7 +16,9 @@ class PriceGrabber
 
 			Rails.logger.info("Updated product: #{ p.id }")
 
-			ProductMailer.target_price_reached(p).deliver
+			if p.current_price < p.target_price
+				ProductMailer.target_price_reached(p).deliver
+			end
 		end
 	end
 
