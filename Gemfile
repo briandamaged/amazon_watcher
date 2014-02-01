@@ -45,7 +45,8 @@ end
 # gem 'debugger', group: [:development, :test]
 
 
-gem 'amazon_deets'
+gem 'amazon_deets', "= 0.0.3"
+gem 'mechanize', "= 2.7.2"
 
 gem 'money-rails'
 
