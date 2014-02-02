@@ -24,9 +24,9 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-    g = AmazonDeets::Grabber.new
+    s = AmazonDeets.create_scraper
 
-    deets = g.grab(params[:product][:url])
+    deets = s.scrape(params[:product][:url])
 
     @product = Product.new(deets)
 
