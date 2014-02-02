@@ -9,8 +9,8 @@ class PriceGrabber
 		p = Product.find(product_id)
 
 		if p
-			g = AmazonDeets::Grabber.new
-			deets = g.grab(p.url)
+			s = AmazonDeets.create_scraper
+			deets = s.scrape(p.url)
 
 			p.update_attributes(deets)
 
